@@ -12,7 +12,8 @@ function TweetInput(props) {
       // refのcurrentに入っている値がDOM
       // 初期値はnull（上で指定した）で、
       // 実際にHTML側に描画されると値が入ります
-      if(textareaRef.current) {
+
+      if(textareaRef.current.value != "") {
           props.addTweet({
               id: new Date().getTime(), // IDはユニークな値にする
               icon: '☠️', // このあたりの値は好きにしてください
