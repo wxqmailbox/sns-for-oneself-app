@@ -24,7 +24,7 @@ function App() {
 
     // addTweet関数はuseCallbackで作成する
     // これも毎回作成していると重くなるので
-    const addTweet = React.useCallback((tweet) => setTweets((prev) => [tweet, ...prev]), [tweets]);
+    const addTweet = React.useCallback((tweet) => setTweets((prev) => [tweet, ...prev]), [setTweets]);
 
     return (
         <div>
